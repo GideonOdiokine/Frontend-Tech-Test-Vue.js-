@@ -228,6 +228,43 @@ td
   background-color: #565ed8
 
 
+
+.filter-checkboxes
+  display: flex
+  flex-wrap: wrap
+  gap: 10px
+  margin-bottom: 10px
+
+.checkbox-container
+  display: flex
+  align-items: center
+  gap: 5px
+  cursor: pointer
+
+.checkbox-container input[type="checkbox"]
+  appearance: none
+  width: 15px
+  height: 15px
+  border: 2px solid #bebebe
+  border-radius: 3px
+  background-color: #fff
+  vertical-align: middle
+
+.checkbox-container input[type="checkbox"]:checked
+  background-color: #c4c4ff
+  border-color: #c4c4ff
+
+.checkbox-container input[type="checkbox"]:checked::after
+  font-size: 10px
+  color: #fff
+
+.checkbox-container input[type="checkbox"]:hover
+  background-color: #eaeaea
+
+.checkbox-container input[type="checkbox"]:focus
+  outline: none
+  box-shadow: 0 0 0 2px rgba(86, 94, 216, 0.3)
+
 .cube2__face:hover
   background-color: #c4c4ff
 
