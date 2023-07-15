@@ -15,5 +15,4 @@ share your completed code/repo with:
 
 |-|-|
 |-|-|
-|James|james@scalpel.ai|
-|Shah|shah@scalpel.ai|
+|Gideon|<Gideonodiokine@gmail.com>|
