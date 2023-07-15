@@ -10,7 +10,7 @@ const faces = [
   "vertical_up",
   "vertical_down",
 ];
-
+// Function to calculate instrument settings based on the poses
 let instrument_settings = (i) => {
   let n = 1;
   let calc = (x) => (n > 0 ? x - 1 : x);
@@ -35,6 +35,7 @@ const cubes = ref([]);
 const hl = ref([]);
 const selectedFace = ref(faces[0]);
 
+// Function to change the selected face for a cube
 const chng_face = (i) => {
   let c = cubes.value.filter((ii) => ii[0] != i);
   let h = hl.value.filter((ii) => ii[0] != i);
@@ -44,16 +45,19 @@ const chng_face = (i) => {
   hl.value = h;
 };
 
+// Function to get the current face of a cube
 const getCube = (i) => {
   let c = cubes.value.filter((ii) => ii[0] == i);
   return c.length > 0 ? c[0][1] : null;
 };
 
+// Function to check if a face of a cube is highlighted
 const getHL = (i, face) => {
   let h = hl.value.filter((ii) => ii[0] == i);
   return h.length > 0 && h[0][1] == face ? true : false;
 };
 
+// Function to get the selected face of a cube
 const getFace = (i) => {
   let h = hl.value.filter((ii) => ii[0] == i);
   return h.length > 0 ? h[0][1] : null;
@@ -124,7 +128,7 @@ onMounted(filterEntries);
           </td>
         </tr>
 
-        <tr>
+        <tr class="scene_container">
           <td>
             <div class="scene">
               <div :class="`cube ${getCube(idx)}`">
@@ -213,6 +217,9 @@ table
   text-transform: lowercase
   font-family: monospace
 
+
+
+
 tr
   background-color: #183666
 
@@ -229,6 +236,11 @@ td
 
 .cube2__face:hover
   background-color: #c4c4ff
+
+.scene_container
+  height: 180px
+
+
 
 .blue-container:hover
   background-color: #b0d4ff
