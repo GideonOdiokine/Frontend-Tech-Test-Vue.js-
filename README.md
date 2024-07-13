@@ -10,9 +10,3 @@ npm i
 launch
 ```bash
 npm run dev
-```
-share your completed code/repo with:
-
-|-|-|
-|-|-|
-|Gideon|<Gideonodiokine@gmail.com>|
